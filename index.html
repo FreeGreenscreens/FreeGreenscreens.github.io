@@ -253,6 +253,54 @@ Anime Greenscreens
 <div class="footer">
 © Pro Video Effects
 </div>
+<script>
+const search = document.getElementById('playlistSearch');
 
+const playlists = {
+    vehicle: document.querySelector('a[href*="PLMNvB18oJ4F-KT7RdFG3n32pkYqkuSdiu"]'),
+    vehicles: document.querySelector('a[href*="PLMNvB18oJ4F-KT7RdFG3n32pkYqkuSdiu"]'),
+    animal: document.querySelector('a[href*="PLMNvB18oJ4F-b2AWbsTPx9UPPfj5dMAkU"]'),
+    animals: document.querySelector('a[href*="PLMNvB18oJ4F-b2AWbsTPx9UPPfj5dMAkU"]'),
+    weather: document.querySelector('a[href*="PLMNvB18oJ4F8NSF1D4Z1e5ahCninYaIxy"]'),
+    text: document.querySelector('a[href*="PLMNvB18oJ4F8w0oeYY0kjOSqzJIi_5xJK"]'),
+    overlay: document.querySelector('a[href*="PLMNvB18oJ4F9wu2xzPaCuiKQJKa_xAq8n"]'),
+    overlays: document.querySelector('a[href*="PLMNvB18oJ4F9wu2xzPaCuiKQJKa_xAq8n"]'),
+    object: document.querySelector('a[href*="PLMNvB18oJ4F8TW66ptE7KM-WJAk-7xXPL"]'),
+    objects: document.querySelector('a[href*="PLMNvB18oJ4F8TW66ptE7KM-WJAk-7xXPL"]'),
+    fire: document.querySelector('a[href*="PLMNvB18oJ4F8SLq14u2c2zL_D9sqbDiD_"]'),
+    speech: document.querySelector('a[href*="PLMNvB18oJ4F9oY94kaUkkoF6nqBp-dp8C"]'),
+    smoke: document.querySelector('a[href*="PLMNvB18oJ4F9i50URDyxIsMrJi8OAuVJD"]'),
+    transition: document.querySelector('a[href*="PLMNvB18oJ4F8Cwe3m6bKFvilWJn_0pOTw"]'),
+    transitions: document.querySelector('a[href*="PLMNvB18oJ4F8Cwe3m6bKFvilWJn_0pOTw"]'),
+    entrance: document.querySelector('a[href*="PLMNvB18oJ4F9UX_DSooQYvZO7YSOLnXfV"]'),
+    entrances: document.querySelector('a[href*="PLMNvB18oJ4F9UX_DSooQYvZO7YSOLnXfV"]'),
+    debris: document.querySelector('a[href*="PLMNvB18oJ4F_eI34EF8_gLh4vuDkfEWtR"]'),
+    celebration: document.querySelector('a[href*="PLMNvB18oJ4F-CWWdnxLszCKzOyyn9o1eF"]'),
+    celebrations: document.querySelector('a[href*="PLMNvB18oJ4F-CWWdnxLszCKzOyyn9o1eF"]'),
+    water: document.querySelector('a[href*="PLMNvB18oJ4F9t_W_M-cnKzZdMQf1H0Vvj"]'),
+    anime: document.querySelector('a[href*="PLMNvB18oJ4F-Zu-ebaPWduh1Ttu7zMD6L"]'),
+    dragonball: document.querySelector('a[href*="PLMNvB18oJ4F-Zu-ebaPWduh1Ttu7zMD6L"]'),
+    "dragon ball": document.querySelector('a[href*="PLMNvB18oJ4F-Zu-ebaPWduh1Ttu7zMD6L"]')
+};
+
+search.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){
+        const value = search.value.toLowerCase().trim();
+
+        if(playlists[value]){
+            playlists[value].scrollIntoView({
+                behavior:'smooth',
+                block:'center'
+            });
+
+            playlists[value].style.outline = '3px solid #39ff14';
+
+            setTimeout(() => {
+                playlists[value].style.outline = '';
+            }, 2000);
+        }
+    }
+});
+</script>
 </body>
 </html>
